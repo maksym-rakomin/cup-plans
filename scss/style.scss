@@ -1,4 +1,12 @@
+// Подключаемые файлы
 @import 'normalize';
+
+// Шрифты
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,700&display=swap');
+
+// Переменные
+$money: #02995b;
+
 
 
 * {
@@ -6,38 +14,72 @@
 }
 html {
     height: 100%;
-    font-size: 50px;
+    font-size: 10px;
 }
 body {
     min-height: 100%;
+    font-family: 'Dosis', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    background-color: #fdde7e;
 }
 a {
     text-decoration: none;
     color: #000;
 }
-.custum__checkbox{
-    label{
-        position: relative;
-        &::before {
-            content: '';
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-            background-color: #3f51b5;
-            border-radius: 5px;
-            border: 2px solid darken(#3f51b5, 20%)
-            transition: all 2.3s ease;
-        }
 
+.flex {
+    display: flex;
+}
+.prices {
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+
+}
+.price {
+    background-color: #fff;
+    flex: 0 0 26.5%;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    height: 445px;
+    transition: all .5s ease;
+    
+    &:hover {
+        height: 500px;
+        & .price__subtitle {
+            font-weight: 400;
+        }
     }
-    input{
-        visibility: hidden;
+    
+    &__money {
+        font-size: 7rem;
+        font-weight: 700;
+        color: $money;
+        text-align: center;
     }
-    input:checked + label:before{
-        content: '';
-        background-image: url(../img/mark.svg);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
+    &__img {
+        width: 135px;
+        height: 135px;
+        margin: 0 auto;
+        text-align: center;
+        overflow: hidden;
+    }
+    &__title {
+        font-size: 4.2rem;
+        text-align: center;
+        margin: 0 auto;
+        font-weight: 300;
+        overflow: hidden;
+        max-height: 4.2rem;
+        max-width: 300px;//!!!!!!!!!!!!!!!!
+    }
+    &__subtitle {
+        text-align: center;
+        max-width: 160px; //!!!!!!!!!!!!!!!!
+        margin: 0 auto;
     }
 }
+
+
