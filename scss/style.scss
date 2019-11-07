@@ -1,0 +1,43 @@
+@import 'normalize';
+
+
+* {
+    box-sizing: border-box;
+}
+html {
+    height: 100%;
+    font-size: 50px;
+}
+body {
+    min-height: 100%;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.custum__checkbox{
+    label{
+        position: relative;
+        &::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background-color: #3f51b5;
+            border-radius: 5px;
+            border: 2px solid darken(#3f51b5, 20%)
+            transition: all 2.3s ease;
+        }
+
+    }
+    input{
+        visibility: hidden;
+    }
+    input:checked + label:before{
+        content: '';
+        background-image: url(../img/mark.svg);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}

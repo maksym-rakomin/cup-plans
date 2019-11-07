@@ -1,0 +1,1 @@
+The purpose of this work is to consolidate the acquired knowledge of page layout using CSS Flexbox technology.
